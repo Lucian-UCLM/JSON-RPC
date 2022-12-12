@@ -20,14 +20,12 @@ Implementación de ejemplos para el trabajo teórico de sistemas distribuidos so
 
 - **El ip se dice durante la presentación**
 
-<<<<<<< HEAD
 - Puedes cambiar los campos `name` y `message` para hacer el experimento más único.
 
 - Hay dos posibles métodos:
   - `write`: Para registrar un mensaje con un nombre y el propio mensaje
   - `readAll`: Para recibir todos los mensajes que se han escrito desde que el server si inicio
-=======
+
 - Hay dos posibles metodos:
     -  ```write```: Para registrar un mensaje con un nombre y el propio mensaje
     -  ```readAll```: Para recibir todos los mensajes que se han escrito
->>>>>>> 1964aeb3adccfe918d937f6482c39e97132fe811
