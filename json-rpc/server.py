@@ -1,13 +1,15 @@
 #!/usr/bin/python
 from jsonrpcserver import Success, method, serve, InvalidParams, Error
 import json
-import math
 
 # Write message
 @method
 def write(name, message):    
     if name == "":
         return Error(code=123, message="Empty name provided")
+
+    elif len(name) == 1:
+        return InvalidParams("Name cannot be len 1")
 
     elif message == "":
         return Error(code=123, message="Empty message provided")
@@ -31,17 +33,7 @@ def readAll():
         jason_str = json.load(read_file)
     return Success(jason_str)
 
-
-@method
-def add(operator1, operator2):    
-    if operator1 == "":
-        return Error(code=123, message="Empty operator1 provided")
-    elif operator2 == "":
-        return Error(code=123, message="Empty operator2 provided")
-    else:
-        result = operator1 + operator2
-        return Success(result)
-
+#Main
 if __name__ == "__main__":
     with open("messages-data.json", "w") as write_file:
         json.dump({}, write_file)
