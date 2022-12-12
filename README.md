@@ -14,18 +14,15 @@ Implementación de ejemplos para el trabajo teórico de sistemas distribuidos so
 
 ## Testing de server
 
+- Es necesario instalar curl:
+`sudo apt install curl`
+
 - Para testear el server se puede usar el siguitente comando:
 
 `curl -X POST http://ip:2000 -d '{"jsonrpc": "2.0", "method": "write", "params": {"name": "Lucian", "message": "Hola"}, "id": 1}`
-
-- **El ip se dice durante la presentación**
 
 - Puedes cambiar los campos `name` y `message` para hacer el experimento más único.
 
 - Hay dos posibles métodos:
   - `write`: Para registrar un mensaje con un nombre y el propio mensaje
   - `readAll`: Para recibir todos los mensajes que se han escrito desde que el server si inicio
-
-- Hay dos posibles metodos:
-    -  ```write```: Para registrar un mensaje con un nombre y el propio mensaje
-    -  ```readAll```: Para recibir todos los mensajes que se han escrito
