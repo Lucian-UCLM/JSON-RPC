@@ -9,17 +9,19 @@ Implementación de ejemplos para el trabajo teórico de sistemas distribuidos so
 
 ## Archivos
 
-- [serializacion-json.md](./serializacion-json.md): Carpeta que contiene el ejemplo de serialización y des-serialización en json
-- [json-rpc.md](./json-rpc.md): Carpeta que contiene el ejemplo de json-rpc
+- [serializacion-json](./serializacion-json): Carpeta que contiene el ejemplo de serialización y des-serialización en json
+- [json-rpc](./json-rpc): Carpeta que contiene el ejemplo de json-rpc
 
 ## Testing de server
 
 - Para testear el server se puede usar el siguitente comando:
 
-```curl -X POST http://localhost:2000 -d '{"jsonrpc": "2.0", "method": "write", "params": {"name": "Lucian", "message": "Hola"}, "id": 1}'```
+`curl -X POST http://ip:2000 -d '{"jsonrpc": "2.0", "method": "write", "params": {"name": "Lucian", "message": "Hola"}, "id": 1}`
 
-- Puedes cambiar los campos ```name``` y ```message``` para hacer el experimento más único.
+- **El ip se dice durante la presentación**
 
-- Hay dos posibles metodos:
-    -  ```write```: Para registrar un mensaje con un nombre y el propio mensaje
-    -  ```readAll```: Para recibir todos los mensajes que se han escrito
+- Puedes cambiar los campos `name` y `message` para hacer el experimento más único.
+
+- Hay dos posibles métodos:
+  - `write`: Para registrar un mensaje con un nombre y el propio mensaje
+  - `readAll`: Para recibir todos los mensajes que se han escrito desde que el server si inicio

@@ -2,17 +2,27 @@
 from jsonrpclib import Server
 import sys
 
-def main():
-    server = Server('http://localhost:2000')
 
-    name = "Lucian"
-    message = "Hola"
+ip = 'localhost'
+port = 2000
+server = Server(f'http://{ip}:{port}')
 
-    try:
-        print(server.write(name, message))
-        print(server.readAll())
-    except:
-        print("Error: ", sys.exc_info())
 
-if __name__ == '__main__':
-    main()
+if len(sys.argv) == 1:
+    name = ""
+    message = ""
+
+elif len(sys.argv) == 2:
+    name = sys.argv[1]
+    message = ""
+
+elif len(sys.argv) > 3:
+    print("Error params <name> <message>")
+
+else:
+    name = sys.argv[1]
+    message = sys.argv[2]
+
+
+print(server.write(name, message))
+#print(server.readAll())
