@@ -26,7 +26,6 @@ for i in range(2, 10):
 
 # Serializar
 with open("data_file.json", "w") as write_file:
-    write_file.write("{}")
     json.dump(data, write_file, indent=4)
 
 
