@@ -9,8 +9,8 @@ Implementación de ejemplos para el trabajo teórico de sistemas distribuidos so
 
 ## Archivos
 
-- [serializacion-json.md](./serializacion-json.md): Carpeta que contiene el ejemplo de serialización y des-serialización en json
-- [json-rpc.md](./json-rpc.md): Carpeta que contiene el ejemplo de json-rpc
+- [serializacion-json](./serializacion-json): Carpeta que contiene el ejemplo de serialización y des-serialización en json
+- [json-rpc](./json-rpc): Carpeta que contiene el ejemplo de json-rpc
 
 ## Testing de server
 
