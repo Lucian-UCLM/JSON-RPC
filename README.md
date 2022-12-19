@@ -19,7 +19,7 @@ Implementación de ejemplos para el trabajo teórico de sistemas distribuidos so
 
 - Para testear el server se puede usar el siguitente comando:
 
-`curl -X POST http://ip:2000 -d '{"jsonrpc": "2.0", "method": "write", "params": {"name": "Lucian", "message": "Hola"}, "id": 1}`
+`curl -X POST http://172.19.152.96:2000 -d '{"jsonrpc": "2.0", "method": "write", "params": {"name": "Lucian", "message": "Hola"}, "id": 1}'`
 
 - Puedes cambiar los campos `name` y `message` para hacer el experimento más único.
 
